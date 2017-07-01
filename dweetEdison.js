@@ -4,7 +4,7 @@ var dweetClient = require("node-dweetio");
 var dweetio = new dweetClient();
 var light = new groveSensor.GroveLight(0);
 function dweetSend() {
-    dweetio.dweet_for("Light test", {LightIntensity:light.value()}, function(err, dweet)
+    dweetio.dweet_for("ThingName", {LightIntensity:light.value()}, function(err, dweet)
 	{
 		console.log(light.value());
 	});
